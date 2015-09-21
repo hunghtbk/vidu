@@ -1,0 +1,4 @@
+cấp phát bộ nhớ động dùng để quản lý bộ nhớ, vì bộ nhớ là quan trọng,khi ta dùng một khai báo ví dụ nh int a[100] thì bộ nhớ sẽ cấp phát cho ta 100*4byte(kieu int) để lưu mảng a, nhưng trong quá trình sử dụng ta không dùng hết như vậy rất lãng phí. như vậy ta cần cấp phát động, vì có rất nhiều tiến trình dùng bộ nhớ do đó khi cấp phát cho mảng sẽ không liên tiếp. khi đó cấp phát động sẽ gom tất cả các vùng nhớ được cấp phát trong bộ nhớ lại tạo ra một bộ nhớ ảo liên tiếp.
+sử dụng toán tử new:     int *a=new int[10];
+sử dụng hàm :            int *b=(int*)malloc(1000);
+sự khác nhau giữa new va malloc là new là một toán tử còn malloc là một hàm kiểu void nên có thể ép kiểu cho con trỏ được.
